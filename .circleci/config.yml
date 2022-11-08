@@ -36,4 +36,8 @@ workflows:
             branches:
               only:
                 - master
-      - build-and-test-javascript
+      - build-and-test-javascript:
+           filters:
+            branches:
+              only:
+                - master
