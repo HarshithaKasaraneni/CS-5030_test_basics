@@ -25,3 +25,14 @@ describe('todo test suite', () => {
 
 
 });
+
+    test("add_todo", () => {
+        todoitem = {
+            "title": "P1",
+            "description": "G1",
+            "done": false
+        }
+        todo_service.add_todo(todoitem);
+        expect(todo_service.get_todos().todo.length).toEqual(4);
+        expect(todo_service.todo_data.todo[3].title).toEqual("P1");
+    });
