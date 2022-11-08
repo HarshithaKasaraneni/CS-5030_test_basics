@@ -36,8 +36,21 @@ describe('todo test suite', () => {
         expect(todo_service.get_todos().todo.length).toEqual(3);
     });
     
+    
+    test("update_todo", () => {
 
-    // Write all your test cases here that corresponds to software requirements
+        todoitem = {
+            "title": "P1",
+            "description": "G1",
+            "done": false
+        }
+        todo_service.update_todo(0,todoitem);
+        expect(todo_service.get_todos().todo.length).toEqual(3);
+        expect(todo_service.todo_data.todo[0].title).toEqual("P1");
+    });
+    
+
+   
 
 
 });
