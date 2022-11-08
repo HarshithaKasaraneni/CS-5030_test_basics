@@ -32,7 +32,14 @@ class todoservice{
     }
 
     update_todo(id, todo){
-        // Your code here
+        for (var i in this.todo_data.todo) 
+        {
+             if (i == id) 
+             {
+                this.todo_data.todo[i] = todo;
+             }  
+             break;
+        }
     }
 }
 
