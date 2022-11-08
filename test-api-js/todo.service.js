@@ -27,7 +27,8 @@ class todoservice{
     }
 
     delete_todo(id){
-        // Your code here
+        this.todo_data.todo.splice(id, 1);
+        
     }
 
     update_todo(id, todo){
