@@ -18,14 +18,6 @@ describe('todo test suite', () => {
     test("get_todos", () => {
         expect(todo_service.get_todos().todo.length).toEqual(3);
     });
-
-    
-
-    // Write all your test cases here that corresponds to software requirements
-
-
-});
-
     test("add_todo", () => {
         todoitem = {
             "title": "P1",
@@ -36,3 +28,11 @@ describe('todo test suite', () => {
         expect(todo_service.get_todos().todo.length).toEqual(4);
         expect(todo_service.todo_data.todo[3].title).toEqual("P1");
     });
+    
+
+    // Write all your test cases here that corresponds to software requirements
+
+
+});
+
+    
